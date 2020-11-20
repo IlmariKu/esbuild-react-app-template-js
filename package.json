@@ -1,10 +1,10 @@
 {
-  "name": "nano-react-app-template",
+  "name": "esbuild-react-app-template",
   "version": "0.1.0",
-  "description": "Hard to get more minimal than this React app",
+  "description": "JS-template for esbuild-react-app",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "start": "esbuild src/App.jsx --bundle --sourcemap --outfile=src/bundle.js --define:process.env.NODE_ENV='production'",
+    "build": "esbuild src/App.jsx --bundle --minify --define:process.env.NODE_ENV='production' --outfile=src/bundle.js"
   },
   "license": "MIT",
   "dependencies": {
