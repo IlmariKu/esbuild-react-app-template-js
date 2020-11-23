@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "description": "JS-template for esbuild-react-app",
   "scripts": {
-    "start": "chokidar src/ -c 'npm run build'",
-    "build": "node build.js"
+    "start": "node build && chokidar src/ -c 'npm run build' & npm run watchfiles",
+    "build": "node build.js",
+    "watchfiles": "live-server --wait=800 --quiet"
   },
   "license": "MIT",
   "dependencies": {
@@ -13,6 +14,7 @@
   },
   "devDependencies": {
     "chokidar-cli": "^2.1.0",
+    "live-server": "^1.2.1",
     "esbuild": "^0.8.6"
   }
 }
